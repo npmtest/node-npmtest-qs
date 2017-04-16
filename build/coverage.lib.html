@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-qs/qs/lib/stringify.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-qs/node_modules/qs/lib/stringify.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-qs">npmtest-qs (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-qs/qs/lib/stringify.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-qs/node_modules/qs/lib/stringify.js</span></h1>
     <h2>
         
         Statements: <span class="metric">8.05% <small>(7 / 87)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-qs/qs/lib/</a> » stringify.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-qs/node_modules/qs/lib/</a> &#187; stringify.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -634,14 +636,14 @@ var utils = require('./utils');
 var formats = require('./formats');
 &nbsp;
 var arrayPrefixGenerators = {
-    brackets: <span class="fstat-no" title="function not covered">function brackets(prefix) {</span> // eslint-disable-line func-name-matching
-<span class="cstat-no" title="statement not covered">        return prefix + '[]';</span>
+    brackets: <span class="fstat-no" title="function not covered" >function brackets(prefix) {</span> // eslint-disable-line func-name-matching
+<span class="cstat-no" title="statement not covered" >        return prefix + '[]';</span>
     },
-    indices: <span class="fstat-no" title="function not covered">function indices(prefix, key) {</span> // eslint-disable-line func-name-matching
-<span class="cstat-no" title="statement not covered">        return prefix + '[' + key + ']';</span>
+    indices: <span class="fstat-no" title="function not covered" >function indices(prefix, key) {</span> // eslint-disable-line func-name-matching
+<span class="cstat-no" title="statement not covered" >        return prefix + '[' + key + ']';</span>
     },
-    repeat: <span class="fstat-no" title="function not covered">function repeat(prefix) {</span> // eslint-disable-line func-name-matching
-<span class="cstat-no" title="statement not covered">        return prefix;</span>
+    repeat: <span class="fstat-no" title="function not covered" >function repeat(prefix) {</span> // eslint-disable-line func-name-matching
+<span class="cstat-no" title="statement not covered" >        return prefix;</span>
     }
 };
 &nbsp;
@@ -652,14 +654,14 @@ var defaults = {
     encode: true,
     encoder: utils.encode,
     encodeValuesOnly: false,
-    serializeDate: <span class="fstat-no" title="function not covered">function serializeDate(date) {</span> // eslint-disable-line func-name-matching
-<span class="cstat-no" title="statement not covered">        return toISO.call(date);</span>
+    serializeDate: <span class="fstat-no" title="function not covered" >function serializeDate(date) {</span> // eslint-disable-line func-name-matching
+<span class="cstat-no" title="statement not covered" >        return toISO.call(date);</span>
     },
     skipNulls: false,
     strictNullHandling: false
 };
 &nbsp;
-var stringify = <span class="fstat-no" title="function not covered">function stringify( // eslint-disable-line func-name-matching</span>
+var stringify = <span class="fstat-no" title="function not covered" >function stringify( // eslint-disable-line func-name-matching</span>
     object,
     prefix,
     generateArrayPrefix,
@@ -673,50 +675,50 @@ var stringify = <span class="fstat-no" title="function not covered">function str
     formatter,
     encodeValuesOnly
 ) {
-<span class="cstat-no" title="statement not covered">    var obj = object;</span>
-<span class="cstat-no" title="statement not covered">    if (typeof filter === 'function') {</span>
-<span class="cstat-no" title="statement not covered">        obj = filter(prefix, obj);</span>
-    } else <span class="cstat-no" title="statement not covered">if (obj instanceof Date) {</span>
-<span class="cstat-no" title="statement not covered">        obj = serializeDate(obj);</span>
-    } else <span class="cstat-no" title="statement not covered">if (obj === null) {</span>
-<span class="cstat-no" title="statement not covered">        if (strictNullHandling) {</span>
-<span class="cstat-no" title="statement not covered">            return encoder &amp;&amp; !encodeValuesOnly ? encoder(prefix) : prefix;</span>
+<span class="cstat-no" title="statement not covered" >    var obj = object;</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof filter === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >        obj = filter(prefix, obj);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (obj instanceof Date) {</span>
+<span class="cstat-no" title="statement not covered" >        obj = serializeDate(obj);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (obj === null) {</span>
+<span class="cstat-no" title="statement not covered" >        if (strictNullHandling) {</span>
+<span class="cstat-no" title="statement not covered" >            return encoder &amp;&amp; !encodeValuesOnly ? encoder(prefix) : prefix;</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered">        obj = '';</span>
+<span class="cstat-no" title="statement not covered" >        obj = '';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (typeof obj === 'string' || typeof obj === 'number' || typeof obj === 'boolean' || utils.isBuffer(obj)) {</span>
-<span class="cstat-no" title="statement not covered">        if (encoder) {</span>
-<span class="cstat-no" title="statement not covered">            var keyValue = encodeValuesOnly ? prefix : encoder(prefix);</span>
-<span class="cstat-no" title="statement not covered">            return [formatter(keyValue) + '=' + formatter(encoder(obj))];</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof obj === 'string' || typeof obj === 'number' || typeof obj === 'boolean' || utils.isBuffer(obj)) {</span>
+<span class="cstat-no" title="statement not covered" >        if (encoder) {</span>
+<span class="cstat-no" title="statement not covered" >            var keyValue = encodeValuesOnly ? prefix : encoder(prefix);</span>
+<span class="cstat-no" title="statement not covered" >            return [formatter(keyValue) + '=' + formatter(encoder(obj))];</span>
         }
-<span class="cstat-no" title="statement not covered">        return [formatter(prefix) + '=' + formatter(String(obj))];</span>
+<span class="cstat-no" title="statement not covered" >        return [formatter(prefix) + '=' + formatter(String(obj))];</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var values = [];</span>
+<span class="cstat-no" title="statement not covered" >    var values = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (typeof obj === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered">        return values;</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof obj === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >        return values;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var objKeys;</span>
-<span class="cstat-no" title="statement not covered">    if (Array.isArray(filter)) {</span>
-<span class="cstat-no" title="statement not covered">        objKeys = filter;</span>
+<span class="cstat-no" title="statement not covered" >    var objKeys;</span>
+<span class="cstat-no" title="statement not covered" >    if (Array.isArray(filter)) {</span>
+<span class="cstat-no" title="statement not covered" >        objKeys = filter;</span>
     } else {
-<span class="cstat-no" title="statement not covered">        var keys = Object.keys(obj);</span>
-<span class="cstat-no" title="statement not covered">        objKeys = sort ? keys.sort(sort) : keys;</span>
+<span class="cstat-no" title="statement not covered" >        var keys = Object.keys(obj);</span>
+<span class="cstat-no" title="statement not covered" >        objKeys = sort ? keys.sort(sort) : keys;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; objKeys.length; ++i) {</span>
-<span class="cstat-no" title="statement not covered">        var key = objKeys[i];</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; objKeys.length; ++i) {</span>
+<span class="cstat-no" title="statement not covered" >        var key = objKeys[i];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        if (skipNulls &amp;&amp; obj[key] === null) {</span>
-<span class="cstat-no" title="statement not covered">            continue;</span>
+<span class="cstat-no" title="statement not covered" >        if (skipNulls &amp;&amp; obj[key] === null) {</span>
+<span class="cstat-no" title="statement not covered" >            continue;</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered">        if (Array.isArray(obj)) {</span>
-<span class="cstat-no" title="statement not covered">            values = values.concat(stringify(</span>
+<span class="cstat-no" title="statement not covered" >        if (Array.isArray(obj)) {</span>
+<span class="cstat-no" title="statement not covered" >            values = values.concat(stringify(</span>
                 obj[key],
                 generateArrayPrefix(prefix, key),
                 generateArrayPrefix,
@@ -731,7 +733,7 @@ var stringify = <span class="fstat-no" title="function not covered">function str
                 encodeValuesOnly
             ));
         } else {
-<span class="cstat-no" title="statement not covered">            values = values.concat(stringify(</span>
+<span class="cstat-no" title="statement not covered" >            values = values.concat(stringify(</span>
                 obj[key],
                 prefix + (allowDots ? '.' + key : '[' + key + ']'),
                 generateArrayPrefix,
@@ -748,76 +750,76 @@ var stringify = <span class="fstat-no" title="function not covered">function str
         }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    return values;</span>
+<span class="cstat-no" title="statement not covered" >    return values;</span>
 };
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function (object, opts) {</span>
-<span class="cstat-no" title="statement not covered">    var obj = object;</span>
-<span class="cstat-no" title="statement not covered">    var options = opts || {};</span>
+module.exports = <span class="fstat-no" title="function not covered" >function (object, opts) {</span>
+<span class="cstat-no" title="statement not covered" >    var obj = object;</span>
+<span class="cstat-no" title="statement not covered" >    var options = opts || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (options.encoder !== null &amp;&amp; options.encoder !== undefined &amp;&amp; typeof options.encoder !== 'function') {</span>
-<span class="cstat-no" title="statement not covered">        throw new TypeError('Encoder has to be a function.');</span>
+<span class="cstat-no" title="statement not covered" >    if (options.encoder !== null &amp;&amp; options.encoder !== undefined &amp;&amp; typeof options.encoder !== 'function') {</span>
+<span class="cstat-no" title="statement not covered" >        throw new TypeError('Encoder has to be a function.');</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var delimiter = typeof options.delimiter === 'undefined' ? defaults.delimiter : options.delimiter;</span>
-<span class="cstat-no" title="statement not covered">    var strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;</span>
-<span class="cstat-no" title="statement not covered">    var skipNulls = typeof options.skipNulls === 'boolean' ? options.skipNulls : defaults.skipNulls;</span>
-<span class="cstat-no" title="statement not covered">    var encode = typeof options.encode === 'boolean' ? options.encode : defaults.encode;</span>
-<span class="cstat-no" title="statement not covered">    var encoder = typeof options.encoder === 'function' ? options.encoder : defaults.encoder;</span>
-<span class="cstat-no" title="statement not covered">    var sort = typeof options.sort === 'function' ? options.sort : null;</span>
-<span class="cstat-no" title="statement not covered">    var allowDots = typeof options.allowDots === 'undefined' ? false : options.allowDots;</span>
-<span class="cstat-no" title="statement not covered">    var serializeDate = typeof options.serializeDate === 'function' ? options.serializeDate : defaults.serializeDate;</span>
-<span class="cstat-no" title="statement not covered">    var encodeValuesOnly = typeof options.encodeValuesOnly === 'boolean' ? options.encodeValuesOnly : defaults.encodeValuesOnly;</span>
-<span class="cstat-no" title="statement not covered">    if (typeof options.format === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered">        options.format = formats.default;</span>
-    } else <span class="cstat-no" title="statement not covered">if (!Object.prototype.hasOwnProperty.call(formats.formatters, options.format)) {</span>
-<span class="cstat-no" title="statement not covered">        throw new TypeError('Unknown format option provided.');</span>
+<span class="cstat-no" title="statement not covered" >    var delimiter = typeof options.delimiter === 'undefined' ? defaults.delimiter : options.delimiter;</span>
+<span class="cstat-no" title="statement not covered" >    var strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;</span>
+<span class="cstat-no" title="statement not covered" >    var skipNulls = typeof options.skipNulls === 'boolean' ? options.skipNulls : defaults.skipNulls;</span>
+<span class="cstat-no" title="statement not covered" >    var encode = typeof options.encode === 'boolean' ? options.encode : defaults.encode;</span>
+<span class="cstat-no" title="statement not covered" >    var encoder = typeof options.encoder === 'function' ? options.encoder : defaults.encoder;</span>
+<span class="cstat-no" title="statement not covered" >    var sort = typeof options.sort === 'function' ? options.sort : null;</span>
+<span class="cstat-no" title="statement not covered" >    var allowDots = typeof options.allowDots === 'undefined' ? false : options.allowDots;</span>
+<span class="cstat-no" title="statement not covered" >    var serializeDate = typeof options.serializeDate === 'function' ? options.serializeDate : defaults.serializeDate;</span>
+<span class="cstat-no" title="statement not covered" >    var encodeValuesOnly = typeof options.encodeValuesOnly === 'boolean' ? options.encodeValuesOnly : defaults.encodeValuesOnly;</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof options.format === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >        options.format = formats.default;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (!Object.prototype.hasOwnProperty.call(formats.formatters, options.format)) {</span>
+<span class="cstat-no" title="statement not covered" >        throw new TypeError('Unknown format option provided.');</span>
     }
-<span class="cstat-no" title="statement not covered">    var formatter = formats.formatters[options.format];</span>
-<span class="cstat-no" title="statement not covered">    var objKeys;</span>
-<span class="cstat-no" title="statement not covered">    var filter;</span>
+<span class="cstat-no" title="statement not covered" >    var formatter = formats.formatters[options.format];</span>
+<span class="cstat-no" title="statement not covered" >    var objKeys;</span>
+<span class="cstat-no" title="statement not covered" >    var filter;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (typeof options.filter === 'function') {</span>
-<span class="cstat-no" title="statement not covered">        filter = options.filter;</span>
-<span class="cstat-no" title="statement not covered">        obj = filter('', obj);</span>
-    } else <span class="cstat-no" title="statement not covered">if (Array.isArray(options.filter)) {</span>
-<span class="cstat-no" title="statement not covered">        filter = options.filter;</span>
-<span class="cstat-no" title="statement not covered">        objKeys = filter;</span>
-    }
-&nbsp;
-<span class="cstat-no" title="statement not covered">    var keys = [];</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered">    if (typeof obj !== 'object' || obj === null) {</span>
-<span class="cstat-no" title="statement not covered">        return '';</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof options.filter === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >        filter = options.filter;</span>
+<span class="cstat-no" title="statement not covered" >        obj = filter('', obj);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (Array.isArray(options.filter)) {</span>
+<span class="cstat-no" title="statement not covered" >        filter = options.filter;</span>
+<span class="cstat-no" title="statement not covered" >        objKeys = filter;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var arrayFormat;</span>
-<span class="cstat-no" title="statement not covered">    if (options.arrayFormat in arrayPrefixGenerators) {</span>
-<span class="cstat-no" title="statement not covered">        arrayFormat = options.arrayFormat;</span>
-    } else <span class="cstat-no" title="statement not covered">if ('indices' in options) {</span>
-<span class="cstat-no" title="statement not covered">        arrayFormat = options.indices ? 'indices' : 'repeat';</span>
+<span class="cstat-no" title="statement not covered" >    var keys = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (typeof obj !== 'object' || obj === null) {</span>
+<span class="cstat-no" title="statement not covered" >        return '';</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var arrayFormat;</span>
+<span class="cstat-no" title="statement not covered" >    if (options.arrayFormat in arrayPrefixGenerators) {</span>
+<span class="cstat-no" title="statement not covered" >        arrayFormat = options.arrayFormat;</span>
+    } else <span class="cstat-no" title="statement not covered" >if ('indices' in options) {</span>
+<span class="cstat-no" title="statement not covered" >        arrayFormat = options.indices ? 'indices' : 'repeat';</span>
     } else {
-<span class="cstat-no" title="statement not covered">        arrayFormat = 'indices';</span>
+<span class="cstat-no" title="statement not covered" >        arrayFormat = 'indices';</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var generateArrayPrefix = arrayPrefixGenerators[arrayFormat];</span>
+<span class="cstat-no" title="statement not covered" >    var generateArrayPrefix = arrayPrefixGenerators[arrayFormat];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (!objKeys) {</span>
-<span class="cstat-no" title="statement not covered">        objKeys = Object.keys(obj);</span>
+<span class="cstat-no" title="statement not covered" >    if (!objKeys) {</span>
+<span class="cstat-no" title="statement not covered" >        objKeys = Object.keys(obj);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (sort) {</span>
-<span class="cstat-no" title="statement not covered">        objKeys.sort(sort);</span>
+<span class="cstat-no" title="statement not covered" >    if (sort) {</span>
+<span class="cstat-no" title="statement not covered" >        objKeys.sort(sort);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; objKeys.length; ++i) {</span>
-<span class="cstat-no" title="statement not covered">        var key = objKeys[i];</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; objKeys.length; ++i) {</span>
+<span class="cstat-no" title="statement not covered" >        var key = objKeys[i];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        if (skipNulls &amp;&amp; obj[key] === null) {</span>
-<span class="cstat-no" title="statement not covered">            continue;</span>
+<span class="cstat-no" title="statement not covered" >        if (skipNulls &amp;&amp; obj[key] === null) {</span>
+<span class="cstat-no" title="statement not covered" >            continue;</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered">        keys = keys.concat(stringify(</span>
+<span class="cstat-no" title="statement not covered" >        keys = keys.concat(stringify(</span>
             obj[key],
             key,
             generateArrayPrefix,
@@ -833,15 +835,14 @@ module.exports = <span class="fstat-no" title="function not covered">function (o
         ));
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    return keys.join(delimiter);</span>
+<span class="cstat-no" title="statement not covered" >    return keys.join(delimiter);</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 06:59:02 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 08:54:07 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
