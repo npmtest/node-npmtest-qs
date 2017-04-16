@@ -1,7 +1,7 @@
 # test coverage for  [qs (v6.4.0)](https://github.com/ljharb/qs)  [![npm package](https://img.shields.io/npm/v/npmtest-qs.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-qs) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-qs.svg)](https://travis-ci.org/npmtest/node-npmtest-qs)
 #### A querystring parser that supports nesting and arrays, with a depth limit
 
-[![NPM](https://nodei.co/npm/qs.png?downloads=true)](https://www.npmjs.com/package/qs)
+[![NPM](https://nodei.co/npm/qs.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/qs)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-qs/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,11 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-qs/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-qs/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-qs/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-qs/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-qs/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-qs/build/coverage.html/index.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-qs/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-qs/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-qs/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-qs%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-qs/build/test-report.html)
+[![test-report](https://npmtest.github.io/node-npmtest-qs/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-qs/build/test-report.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-qs/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-qs%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-qs/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-qs/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-qs/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-qs/build/screenCapture.npmPackageListing.svg)
 
@@ -32,7 +32,6 @@
     "contributors": [
         {
             "name": "Jordan Harband",
-            "email": "ljharb@gmail.com",
             "url": "http://ljharb.codes"
         }
     ],
@@ -69,21 +68,17 @@
     "main": "lib/index.js",
     "maintainers": [
         {
-            "name": "hueniverse",
-            "email": "eran@hammer.io"
+            "name": "hueniverse"
         },
         {
-            "name": "ljharb",
-            "email": "ljharb@gmail.com"
+            "name": "ljharb"
         },
         {
-            "name": "nlf",
-            "email": "quitlahok@gmail.com"
+            "name": "nlf"
         }
     ],
     "name": "qs",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/ljharb/qs.git"
