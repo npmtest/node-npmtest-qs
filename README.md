@@ -1,6 +1,6 @@
 # npmtest-qs
 
-#### test coverage for  [qs (v6.4.0)](https://github.com/ljharb/qs)  [![npm package](https://img.shields.io/npm/v/npmtest-qs.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-qs) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-qs.svg)](https://travis-ci.org/npmtest/node-npmtest-qs)
+#### basic test coverage for  [qs (v6.4.0)](https://github.com/ljharb/qs)  [![npm package](https://img.shields.io/npm/v/npmtest-qs.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-qs) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-qs.svg)](https://travis-ci.org/npmtest/node-npmtest-qs)
 
 #### A querystring parser that supports nesting and arrays, with a depth limit
 
